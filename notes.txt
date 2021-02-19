@@ -1,0 +1,64 @@
+What does Babel do?
+- It basically takes all of your files and makes sure that your react project works on every old/new version of any browser available. 
+- Moving away from the traditional problems.
+
+What does WebPack do?
+- Allows us to write our code in a modular way. The build folder only has some of our files.
+- WebPack will take all of ours files and will bundle up these into one and make your code optimized.
+- All this configuration is already done with the help of our build folder.
+
+The build folder is what we will use to deploy our program whereas the src folder is our working space.
+
+
+Package.json is a kind of a package manager which allows us to install other react components. 
+
+
+Public - > Index.html. In here we have one div in the body tag where we inject our react-app to use it as our project.
+
+
+Dont eject: 
+This is the internal working of the react app. This returns you all the files about how react is working internally.
+
+
+Class vs Function:
+- When we use a class instead of a function we get access to this thing called a state. State : A JS object with properties that
+we can access at any point inside our class.
+The class components gives us a method setState() which lets us modify the state which was initially set at default.
+
+JSX : className is a jsx attribute. Classname means an actuall class in JSX. 
+{} : The thing inside is a javascript expression. 
+
+You are not allowed to change the state without calling setState(). We wont modify the state automatically, the robot will re-render
+the state onClick. The render() gets called again as now the state is a different thing. 
+Even onClick() is JSX mimicing HTML. We can use both html attributes as well as JSX attributes. It tries to mimic the HTML to update
+the DOM by itself. 
+
+We need to key to identify each of the elements to keep track of which one it wants to update if needed.
+
+
+The birth of a single page application:
+Communicating with the backend to modify the dom as the user interacts. Now instead of having to communicate back to back, react does this
+for you by rendering the page as requested. 
+
+The way we build applications now is very dynamic. When a user opens something we are always communicating with outer servers to reflect
+what the user has requested. 
+
+
+State vs Props:
+-The state is the main part of App.js which keeps track of the state of our app. This state is trickled down to little components in the
+form of props. For example the state is 'monsters' which is trickled down as props to card list and cards. Each component is a function
+that needs rendering as a result of events.
+
+setState() is by default asynchronous and can be made synchronous if we add a second argument of a callback function within the setState() call.
+
+const {} = is used to destructure objects.
+
+A functional component is one that gets some props and returns some html. Easier to test and reason about in some ways.
+A class component has much other things. 
+
+If we were to write our own methods we would have to be careful about how we use the 'this' keyword. Bind basically allows us to use the 
+'this' keyword as a reference to whatever we passed in. 
+
+Arrow functions allow you to define 'this' when the argument is given or defined. Automatically binds the arrow function to the context
+in which it was defined, which basically was the app component. automatically get binded. 'lexucly scopes' the function to the original
+component. 
